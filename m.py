@@ -559,6 +559,16 @@ r"""
 
 
 
+@app.route('/')
+def home_api():
+    return jsonify({
+        "message": "Welcome to Marw's ASCII API",
+        "status": "success",
+        "routes": {
+            "/dancer": "Show animated ASCII",
+            "/asc": "show asc ascii art"
+        }
+    })
 
 
 @app.route('/dancer')
